@@ -19,6 +19,8 @@ class PaymentPage extends StatefulWidget {
 }
 
 class _PaymentPageState extends State<PaymentPage> {
+
+  // define func verify
   Future<void> verify() async {
     try {
       Map<String, dynamic> verificationResult =
@@ -30,7 +32,7 @@ class _PaymentPageState extends State<PaymentPage> {
       print(e.toString());
     }
   }
-
+// define func pay 
   Future<void> pay() async {
     try {
       String txRef = TxRefRandomGenerator.generate(prefix: 'test');
